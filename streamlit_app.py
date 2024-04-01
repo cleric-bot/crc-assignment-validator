@@ -68,7 +68,7 @@ def main():
     st.title("Assignment Validator")
 
     # Input for the candidate's API URL
-    base_url = st.text_input("Enter the candidate's API URL:")
+    base_url = st.text_input("Enter the API URL of your assignment:")
 
     if st.button("Submit"):
         try:
