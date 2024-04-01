@@ -65,7 +65,7 @@ def submit_question_and_documents(base_url):
 
 
 def main():
-    st.title("Candidate API Tester")
+    st.title("Assignment Validator")
 
     # Input for the candidate's API URL
     base_url = st.text_input("Enter the candidate's API URL:")
