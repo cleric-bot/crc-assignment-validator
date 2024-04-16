@@ -11,7 +11,7 @@ class SubmitQuestionAndDocumentsResponse(BaseModel):
 
 class GetQuestionAndFactsResponse(BaseModel):
     question: str
-    factsByDay: Optional[Dict[str, List[str]]]
+    facts: Optional[List[str]]
     status: str
 
 
@@ -61,7 +61,7 @@ def submit_question_and_documents(base_url):
             return None
         time.sleep(1)  # Wait a bit before polling again
 
-    return data.factsByDay
+    return data.facts
 
 
 def main():
@@ -75,11 +75,9 @@ def main():
             facts = submit_question_and_documents(base_url)
             if facts is not None:
                 st.success("Facts retrieved successfully!")
-                st.write("Facts by Day:")
-                for date, fact_list in facts.items():
-                    st.write(f"Date: {date}")
-                    for fact in fact_list:
-                        st.write(fact)
+                st.write("Facts:")
+                for fact in facts:
+                    st.write(fact)
         except Exception as e:
             st.error(f"An unexpected error occurred: {str(e)}")
 
