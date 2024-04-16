@@ -24,7 +24,6 @@ def submit_question_and_documents(base_url):
             "https://storage.googleapis.com/cleric-assignment-call-logs/call_log_20240315_104111.txt",
             "https://storage.googleapis.com/cleric-assignment-call-logs/call_log_20240316_104111.txt"
         ],
-        "autoApprove": True
     }
 
     # Submit the question and documents
