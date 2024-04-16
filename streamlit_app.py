@@ -66,6 +66,8 @@ def submit_question_and_documents(base_url):
 
 def main():
     st.title("Assignment Validator")
+    st.write("The code to this streamlit app can be found here: "
+             "https://github.com/cleric-bot/crc-assignment-validator/blob/main/streamlit_app.py")
 
     # Input for the candidate's API URL
     base_url = st.text_input("Enter the API URL of your assignment:")
